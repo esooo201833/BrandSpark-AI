@@ -10,6 +10,13 @@ const intlMiddleware = createMiddleware({
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
+  // Skip for API routes and static files
+  if (pathname.startsWith('/api') || 
+      pathname.startsWith('/_next') || 
+      pathname.includes('.')) {
+    return NextResponse.next();
+  }
+  
   // Check if path already has locale prefix
   const hasLocalePrefix = pathname.startsWith('/en') || pathname.startsWith('/ar');
   
@@ -17,7 +24,7 @@ export default function middleware(request: NextRequest) {
     // Redirect to default locale (en)
     const url = request.nextUrl.clone();
     url.pathname = `/en${pathname}`;
-    return NextResponse.rewrite(url);
+    return NextResponse.redirect(url);
   }
   
   return intlMiddleware(request);
