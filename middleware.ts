@@ -21,10 +21,10 @@ export default function middleware(request: NextRequest) {
   const hasLocalePrefix = pathname.startsWith('/en') || pathname.startsWith('/ar');
   
   if (!hasLocalePrefix) {
-    // Redirect to default locale (en)
+    // Rewrite to default locale (en) - use rewrite not redirect for RSC support
     const url = request.nextUrl.clone();
     url.pathname = `/en${pathname}`;
-    return NextResponse.redirect(url);
+    return NextResponse.rewrite(url);
   }
   
   return intlMiddleware(request);
