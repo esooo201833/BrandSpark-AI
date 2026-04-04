@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "features": "機能",
+    "pricing": "価格設定",
+    "docs": "ドキュメント",
+    "login": "ログイン",
+    "signup": "サインアップ"
+  },
+  "hero": {
+    "title": "勝つブランドコンテンツを作成",
+    "description": "ブランド名、スローガン、ソーシャルメディア投稿、ランディングページコピーなど。高度なAIを搭載し、ブランドボイスに完全に対応します。",
+    "startCreating": "作成を開始",
+    "viewDemo": "デモを表示"
+  },
+  "features": {
+    "title": "必要なすべて",
+    "subtitle": "コンテンツ作成ワークフローを合理化するための強力なツール"
+  },
+  "cta": {
+    "title": "ブランドに火をつける準備はできていますか？",
+    "description": "無料で始めて、今日あなたの最初のコンテンツを作成してください。",
+    "launchDashboard": "ダッシュボードを開く"
+  },
+  "auth": {
+    "login": "ログイン",
+    "signup": "サインアップ",
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "confirmPassword": "パスワードを確認",
+    "fullName": "フルネーム",
+    "agreeTerms": "利用規約に同意します",
+    "signInWithGoogle": "Googleでサインイン",
+    "signUpWithGoogle": "Googleでサインアップ",
+    "signInWithGithub": "GitHubでサインイン",
+    "signUpWithGithub": "GitHubでサインアップ",
+    "noAccount": "アカウントをお持ちですか？",
+    "haveAccount": "すでにアカウントをお持ちですか？",
+    "forgotPassword": "パスワードをお忘れですか？",
+    "signing": "サインイン中...",
+    "creating": "アカウントを作成中...",
+    "fillAllFields": "すべてのフィールドを入力してください",
+    "passwordMismatch": "パスワードが一致しません",
+    "passwordTooShort": "パスワードは最低6文字である必要があります",
+    "agreeToTerms": "利用規約に同意する必要があります",
+    "signInSuccess": "おかえりなさい！",
+    "signUpSuccess": "アカウントが正常に作成されました！"
+  },
+  "pricing": {
+    "title": "価格プラン",
+    "subtitle": "ニーズに最適なプランを選択してください",
+    "basic": "基本",
+    "pro": "プロフェッショナル",
+    "enterprise": "エンタープライズ",
+    "chooseplan": "プランを選択",
+    "contactsales": "営業にお問い合わせ",
+    "mostPopular": "最も人気",
+    "perMonth": "/月"
+  }
+}

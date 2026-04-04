@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "features": "Funktionen",
+    "pricing": "Preisgestaltung",
+    "docs": "Dokumentation",
+    "login": "Anmelden",
+    "signup": "Registrieren"
+  },
+  "hero": {
+    "title": "Erstellen Sie gewinnende Markeninhalte",
+    "description": "Generieren Sie Markennamen, Slogans, Social-Media-Beiträge, Landing-Page-Texte und vieles mehr. Angetrieben von fortschrittlicher KI, um perfekt zur Stimme Ihrer Marke zu passen.",
+    "startCreating": "Anfangen zu erstellen",
+    "viewDemo": "Demo anzeigen"
+  },
+  "features": {
+    "title": "Alles, was Sie brauchen",
+    "subtitle": "Leistungsstarke Tools zur Rationalisierung Ihres Content-Erstellungs-Workflows"
+  },
+  "cta": {
+    "title": "Bereit, Ihre Marke zu entzünden?",
+    "description": "Beginnen Sie kostenlos und erstellen Sie heute Ihren ersten Inhalt.",
+    "launchDashboard": "Dashboard öffnen"
+  },
+  "auth": {
+    "login": "Anmelden",
+    "signup": "Registrieren",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "confirmPassword": "Passwort bestätigen",
+    "fullName": "Vollständiger Name",
+    "agreeTerms": "Ich stimme den Geschäftsbedingungen zu",
+    "signInWithGoogle": "Mit Google anmelden",
+    "signUpWithGoogle": "Mit Google registrieren",
+    "signInWithGithub": "Mit GitHub anmelden",
+    "signUpWithGithub": "Mit GitHub registrieren",
+    "noAccount": "Haben Sie kein Konto?",
+    "haveAccount": "Haben Sie bereits ein Konto?",
+    "forgotPassword": "Passwort vergessen?",
+    "signing": "Anmelden läuft...",
+    "creating": "Konto wird erstellt...",
+    "fillAllFields": "Bitte füllen Sie alle Felder aus",
+    "passwordMismatch": "Passwörter stimmen nicht überein",
+    "passwordTooShort": "Passwort muss mindestens 6 Zeichen lang sein",
+    "agreeToTerms": "Sie müssen den Geschäftsbedingungen zustimmen",
+    "signInSuccess": "Willkommen zurück!",
+    "signUpSuccess": "Konto erfolgreich erstellt!"
+  },
+  "pricing": {
+    "title": "Tarife",
+    "subtitle": "Wählen Sie den perfekten Plan für Ihre Anforderungen",
+    "basic": "Grundlegend",
+    "pro": "Professionell",
+    "enterprise": "Unternehmen",
+    "chooseplan": "Plan wählen",
+    "contactsales": "Vertrieb kontaktieren",
+    "mostPopular": "Am beliebtesten",
+    "perMonth": "/Monat"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "features": "Caratteristiche",
+    "pricing": "Prezzi",
+    "docs": "Documentazione",
+    "login": "Accedi",
+    "signup": "Registrati"
+  },
+  "hero": {
+    "title": "Crea contenuti di marca vincenti",
+    "description": "Genera nomi di marchi, slogan, post sui social media, copy delle landing page e molto altro. Alimentato da IA avanzata per corrispondere perfettamente alla voce del tuo marchio.",
+    "startCreating": "Inizia a creare",
+    "viewDemo": "Visualizza demo"
+  },
+  "features": {
+    "title": "Tutto ciò di cui hai bisogno",
+    "subtitle": "Strumenti potenti per semplificare il flusso di lavoro di creazione dei contenuti"
+  },
+  "cta": {
+    "title": "Pronto a illuminare il tuo marchio?",
+    "description": "Inizia gratuitamente e crea il tuo primo contenuto oggi.",
+    "launchDashboard": "Apri dashboard"
+  },
+  "auth": {
+    "login": "Accedi",
+    "signup": "Registrati",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Conferma password",
+    "fullName": "Nome completo",
+    "agreeTerms": "Accetto i termini e le condizioni",
+    "signInWithGoogle": "Accedi con Google",
+    "signUpWithGoogle": "Registrati con Google",
+    "signInWithGithub": "Accedi con GitHub",
+    "signUpWithGithub": "Registrati con GitHub",
+    "noAccount": "Non hai un account?",
+    "haveAccount": "Hai già un account?",
+    "forgotPassword": "Password dimenticata?",
+    "signing": "Accesso in corso...",
+    "creating": "Creazione account...",
+    "fillAllFields": "Compila tutti i campi",
+    "passwordMismatch": "Le password non corrispondono",
+    "passwordTooShort": "La password deve contenere almeno 6 caratteri",
+    "agreeToTerms": "Devi accettare i termini e le condizioni",
+    "signInSuccess": "Bentornato!",
+    "signUpSuccess": "Account creato con successo!"
+  },
+  "pricing": {
+    "title": "Piani tariffari",
+    "subtitle": "Scegli il piano perfetto per le tue esigenze",
+    "basic": "Base",
+    "pro": "Professionale",
+    "enterprise": "Aziendale",
+    "chooseplan": "Scegli piano",
+    "contactsales": "Contatta il team di vendita",
+    "mostPopular": "Più popolare",
+    "perMonth": "/mese"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "features": "Caractéristiques",
+    "pricing": "Tarification",
+    "docs": "Documentation",
+    "login": "Connexion",
+    "signup": "S'inscrire"
+  },
+  "hero": {
+    "title": "Créez du contenu de marque gagnant",
+    "description": "Générez des noms de marque, des slogans, des publications sur les réseaux sociaux, des copies de pages de destination et bien plus encore. Alimenté par l'IA avancée pour correspondre parfaitement à votre voix de marque.",
+    "startCreating": "Commencer à créer",
+    "viewDemo": "Voir la démo"
+  },
+  "features": {
+    "title": "Tout ce dont vous avez besoin",
+    "subtitle": "Des outils puissants pour rationaliser votre flux de travail de création de contenu"
+  },
+  "cta": {
+    "title": "Prêt à illuminer votre marque?",
+    "description": "Commencez gratuitement et créez votre premier contenu aujourd'hui.",
+    "launchDashboard": "Ouvrir le tableau de bord"
+  },
+  "auth": {
+    "login": "Connexion",
+    "signup": "S'inscrire",
+    "email": "Adresse e-mail",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "fullName": "Nom complet",
+    "agreeTerms": "J'accepte les conditions générales",
+    "signInWithGoogle": "Se connecter avec Google",
+    "signUpWithGoogle": "S'inscrire avec Google",
+    "signInWithGithub": "Se connecter avec GitHub",
+    "signUpWithGithub": "S'inscrire avec GitHub",
+    "noAccount": "Vous n'avez pas de compte?",
+    "haveAccount": "Vous avez déjà un compte?",
+    "forgotPassword": "Mot de passe oublié?",
+    "signing": "Connexion en cours...",
+    "creating": "Création du compte...",
+    "fillAllFields": "Veuillez remplir tous les champs",
+    "passwordMismatch": "Les mots de passe ne correspondent pas",
+    "passwordTooShort": "Le mot de passe doit contenir au moins 6 caractères",
+    "agreeToTerms": "Vous devez accepter les conditions générales",
+    "signInSuccess": "Bienvenue!",
+    "signUpSuccess": "Compte créé avec succès!"
+  },
+  "pricing": {
+    "title": "Plans tarifaires",
+    "subtitle": "Choisissez le plan parfait pour vos besoins",
+    "basic": "Basique",
+    "pro": "Professionnel",
+    "enterprise": "Entreprise",
+    "chooseplan": "Choisir un plan",
+    "contactsales": "Contacter les ventes",
+    "mostPopular": "Plus populaire",
+    "perMonth": "/mois"
+  }
+}

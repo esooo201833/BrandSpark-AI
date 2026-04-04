@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "features": "기능",
+    "pricing": "가격",
+    "docs": "문서",
+    "login": "로그인",
+    "signup": "가입"
+  },
+  "hero": {
+    "title": "승리하는 브랜드 콘텐츠 만들기",
+    "description": "브랜드 이름, 슬로건, 소셜 미디어 게시물, 랜딩 페이지 카피 등을 생성합니다. 고급 AI를 통해 브랜드 음성과 완벽하게 일치합니다.",
+    "startCreating": "만들기 시작",
+    "viewDemo": "데모 보기"
+  },
+  "features": {
+    "title": "필요한 모든 것",
+    "subtitle": "콘텐츠 제작 워크플로를 간소화하는 강력한 도구"
+  },
+  "cta": {
+    "title": "브랜드를 불태울 준비가 되었습니까?",
+    "description": "무료로 시작하고 오늘 첫 번째 콘텐츠를 만드세요.",
+    "launchDashboard": "대시보드 열기"
+  },
+  "auth": {
+    "login": "로그인",
+    "signup": "가입",
+    "email": "이메일",
+    "password": "비밀번호",
+    "confirmPassword": "비밀번호 확인",
+    "fullName": "전체 이름",
+    "agreeTerms": "약관에 동의합니다",
+    "signInWithGoogle": "Google로 로그인",
+    "signUpWithGoogle": "Google로 가입",
+    "signInWithGithub": "GitHub로 로그인",
+    "signUpWithGithub": "GitHub로 가입",
+    "noAccount": "계정이 없으신가요?",
+    "haveAccount": "이미 계정이 있으신가요?",
+    "forgotPassword": "비밀번호를 잊으셨나요?",
+    "signing": "로그인 중...",
+    "creating": "계정 생성 중...",
+    "fillAllFields": "모든 필드를 작성하세요",
+    "passwordMismatch": "비밀번호가 일치하지 않습니다",
+    "passwordTooShort": "비밀번호는 최소 6자 이상이어야 합니다",
+    "agreeToTerms": "약관에 동의해야 합니다",
+    "signInSuccess": "다시 오셨습니다!",
+    "signUpSuccess": "계정이 성공적으로 생성되었습니다!"
+  },
+  "pricing": {
+    "title": "가격 계획",
+    "subtitle": "당신의 필요에 맞는 완벽한 계획을 선택하세요",
+    "basic": "기본",
+    "pro": "전문가",
+    "enterprise": "엔터프라이즈",
+    "chooseplan": "계획 선택",
+    "contactsales": "판매팀에 문의",
+    "mostPopular": "가장 인기",
+    "perMonth": "/월"
+  }
+}

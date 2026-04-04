@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "docs": "Docs",
+    "login": "Sign In",
+    "signup": "Sign Up"
+  },
+  "hero": {
+    "title": "Create winning brand content",
+    "description": "Generate brand names, slogans, social posts, landing page copy, and more. Powered by advanced AI to match your brand voice perfectly.",
+    "startCreating": "Start Creating",
+    "viewDemo": "View Demo"
+  },
+  "features": {
+    "title": "Everything you need",
+    "subtitle": "Powerful tools to streamline your content creation workflow"
+  },
+  "cta": {
+    "title": "Ready to spark your brand?",
+    "description": "Get started for free and generate your first piece of content today.",
+    "launchDashboard": "Launch Dashboard"
+  },
+  "auth": {
+    "login": "Sign In",
+    "signup": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "fullName": "Full Name",
+    "agreeTerms": "I agree to the Terms and Conditions",
+    "signInWithGoogle": "Sign in with Google",
+    "signUpWithGoogle": "Sign up with Google",
+    "signInWithGithub": "Sign in with GitHub",
+    "signUpWithGithub": "Sign up with GitHub",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "forgotPassword": "Forgot your password?",
+    "signing": "Signing in...",
+    "creating": "Creating account...",
+    "fillAllFields": "Please fill all fields",
+    "passwordMismatch": "Passwords don't match",
+    "passwordTooShort": "Password must be at least 6 characters",
+    "agreeToTerms": "You must agree to the terms and conditions",
+    "signInSuccess": "Welcome back!",
+    "signUpSuccess": "Account created successfully!"
+  },
+  "pricing": {
+    "title": "Pricing Plans",
+    "subtitle": "Choose the perfect plan for your needs",
+    "basic": "Basic",
+    "pro": "Pro",
+    "enterprise": "Enterprise",
+    "chooseplan": "Choose Plan",
+    "contactsales": "Contact Sales",
+    "mostPopular": "Most Popular",
+    "perMonth": "/month"
+  }
+}

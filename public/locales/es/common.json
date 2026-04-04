@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "features": "Características",
+    "pricing": "Precios",
+    "docs": "Documentación",
+    "login": "Iniciar sesión",
+    "signup": "Registrarse"
+  },
+  "hero": {
+    "title": "Crea contenido de marca ganador",
+    "description": "Genera nombres de marca, eslóganes, publicaciones en redes sociales, copias de páginas de destino y más. Impulsado por IA avanzada para que coincida perfectamente con tu voz de marca.",
+    "startCreating": "Comenzar a crear",
+    "viewDemo": "Ver demostración"
+  },
+  "features": {
+    "title": "Todo lo que necesitas",
+    "subtitle": "Herramientas poderosas para optimizar tu flujo de trabajo de creación de contenido"
+  },
+  "cta": {
+    "title": "¿Listo para encender tu marca?",
+    "description": "Comienza gratis y crea tu primer contenido hoy.",
+    "launchDashboard": "Abrir panel de control"
+  },
+  "auth": {
+    "login": "Iniciar sesión",
+    "signup": "Registrarse",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "fullName": "Nombre completo",
+    "agreeTerms": "Acepto los términos y condiciones",
+    "signInWithGoogle": "Iniciar sesión con Google",
+    "signUpWithGoogle": "Registrarse con Google",
+    "signInWithGithub": "Iniciar sesión con GitHub",
+    "signUpWithGithub": "Registrarse con GitHub",
+    "noAccount": "¿No tienes cuenta?",
+    "haveAccount": "¿Ya tienes cuenta?",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "signing": "Iniciando sesión...",
+    "creating": "Creando cuenta...",
+    "fillAllFields": "Por favor completa todos los campos",
+    "passwordMismatch": "Las contraseñas no coinciden",
+    "passwordTooShort": "La contraseña debe tener al menos 6 caracteres",
+    "agreeToTerms": "Debes aceptar los términos y condiciones",
+    "signInSuccess": "¡Bienvenido de vuelta!",
+    "signUpSuccess": "¡Cuenta creada exitosamente!"
+  },
+  "pricing": {
+    "title": "Planes de precios",
+    "subtitle": "Elige el plan perfecto para tus necesidades",
+    "basic": "Básico",
+    "pro": "Profesional",
+    "enterprise": "Empresarial",
+    "chooseplan": "Elegir plan",
+    "contactsales": "Contactar ventas",
+    "mostPopular": "Más popular",
+    "perMonth": "/mes"
+  }
+}

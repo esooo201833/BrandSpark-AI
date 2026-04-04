@@ -1,0 +1,134 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String     @id @default(cuid())
+  email     String     @unique
+  name      String
+  password  String?
+  avatar    String?
+  
+  emailVerified Boolean  @default(false)
+  emailToken    String?
+  emailTokenExpiry DateTime?
+  
+  plan      String     @default("free") // free, basic, pro, enterprise
+  credits   Int        @default(100)
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  
+  generations Generation[]
+  subscription Subscription?
+  paymentRequests PaymentRequest[] @relation("UserPaymentRequests")
+  
+  @@index([email])
+  @@index([plan])
+}
+
+model Generation {
+  id        String     @id @default(cuid())
+  userId    String
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  contentType String   // brand-name, slogan, social-post, etc
+  tone        String   // professional, casual, creative, technical
+  input       String   // Stored as JSON string
+  output      String
+  
+  createdAt DateTime   @default(now())
+  
+  @@index([userId])
+  @@index([createdAt])
+}
+
+model Subscription {
+  id        String     @id @default(cuid())
+  userId    String     @unique
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  stripeCustomerId String? @unique
+  stripeSubscriptionId String? @unique
+  stripePriceId String?
+  
+  plan      String     // basic, pro, enterprise
+  status    String     // active, canceled, past_due
+  currentPeriodStart DateTime?
+  currentPeriodEnd DateTime?
+  
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+}
+
+model PaymentMethod {
+  id        String     @id @default(cuid())
+  stripePaymentMethodId String
+  type      String     // card, paypal, etc
+  last4     String?
+  expiryMonth Int?
+  expiryYear Int?
+  
+  createdAt DateTime   @default(now())
+}
+
+model PaymentRequest {
+  id        String     @id @default(cuid())
+  userId    String
+  user      User       @relation("UserPaymentRequests", fields: [userId], references: [id], onDelete: Cascade)
+  
+  provider  String     // perfectmoney, bank_transfer, paypal_manual
+  planName  String     // starter, pro, unlimited
+  amount    Float
+  currency  String     @default("USD")
+  
+  status    String     @default("pending") // pending, submitted, approved, rejected
+  referenceCode String  @unique
+  referenceNumber String?
+  screenshotUrl String?
+  
+  // Perfect Money specific
+  accountNumber String?
+  
+  // Bank transfer specific
+  bankName  String?
+  accountHolder String?
+  iban      String?
+  
+  notes     String?
+  approverNotes String?
+  rejectionReason String?
+  
+  submittedAt DateTime?
+  approvedAt DateTime?
+  rejectedAt DateTime?
+  
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  
+  @@index([userId])
+  @@index([status])
+  @@index([provider])
+}
+
+model ContactMessage {
+  id        String     @id @default(cuid())
+  name      String
+  email     String
+  subject   String
+  message   String
+  status    String     @default("UNREAD") // UNREAD, READ, REPLIED
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  
+  @@index([email])
+  @@index([status])
+  @@index([createdAt])
+}

@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "features": "功能特性",
+    "pricing": "定价",
+    "docs": "文档",
+    "login": "登录",
+    "signup": "注册"
+  },
+  "hero": {
+    "title": "创建获胜的品牌内容",
+    "description": "生成品牌名称、口号、社交媒体帖子、着陆页文案等。由先进的人工智能驱动，完美匹配您的品牌声调。",
+    "startCreating": "开始创建",
+    "viewDemo": "查看演示"
+  },
+  "features": {
+    "title": "您需要的一切",
+    "subtitle": "强大的工具简化您的内容创建工作流程"
+  },
+  "cta": {
+    "title": "准备好点燃您的品牌了吗？",
+    "description": "免费开始，今天就创建您的第一个内容。",
+    "launchDashboard": "打开仪表板"
+  },
+  "auth": {
+    "login": "登录",
+    "signup": "注册",
+    "email": "电子邮件",
+    "password": "密码",
+    "confirmPassword": "确认密码",
+    "fullName": "全名",
+    "agreeTerms": "我同意条款和条件",
+    "signInWithGoogle": "使用Google登录",
+    "signUpWithGoogle": "使用Google注册",
+    "signInWithGithub": "使用GitHub登录",
+    "signUpWithGithub": "使用GitHub注册",
+    "noAccount": "没有账户?",
+    "haveAccount": "已有账户?",
+    "forgotPassword": "忘记密码?",
+    "signing": "登录中...",
+    "creating": "创建账户中...",
+    "fillAllFields": "请填写所有字段",
+    "passwordMismatch": "密码不匹配",
+    "passwordTooShort": "密码至少需要6个字符",
+    "agreeToTerms": "您必须同意条款和条件",
+    "signInSuccess": "欢迎回来!",
+    "signUpSuccess": "账户创建成功!"
+  },
+  "pricing": {
+    "title": "定价计划",
+    "subtitle": "选择适合您需求的完美计划",
+    "basic": "基础",
+    "pro": "专业",
+    "enterprise": "企业",
+    "chooseplan": "选择计划",
+    "contactsales": "联系销售",
+    "mostPopular": "最受欢迎",
+    "perMonth": "/月"
+  }
+}

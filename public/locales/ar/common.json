@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "features": "المميزات",
+    "pricing": "الأسعار",
+    "docs": "التوثيق",
+    "login": "تسجيل دخول",
+    "signup": "إنشاء حساب"
+  },
+  "hero": {
+    "title": "إنشاء محتوى ماركة رائع",
+    "description": "إنشاء أسماء ماركات وشعارات ومنشورات على وسائل التواصل ونسخ صفحات الهبوط والمزيد. مدعوم بذكاء اصطناعي متقدم يطابق صوت ماركتك تماماً.",
+    "startCreating": "ابدأ الإنشاء",
+    "viewDemo": "عرض توضيحي"
+  },
+  "features": {
+    "title": "كل ما تحتاجه",
+    "subtitle": "أدوات قوية لتسهيل سير عمل إنشاء المحتوى"
+  },
+  "cta": {
+    "title": "هل أنت جاهز لإضاءة ماركتك؟",
+    "description": "ابدأ مجاناً وأنشئ أول محتوى لك اليوم.",
+    "launchDashboard": "فتح لوحة التحكم"
+  },
+  "auth": {
+    "login": "تسجيل دخول",
+    "signup": "إنشاء حساب",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "fullName": "الاسم الكامل",
+    "agreeTerms": "أوافق على الشروط والأحكام",
+    "signInWithGoogle": "تسجيل الدخول عبر Google",
+    "signUpWithGoogle": "الاشتراك عبر Google",
+    "signInWithGithub": "تسجيل الدخول عبر GitHub",
+    "signUpWithGithub": "الاشتراك عبر GitHub",
+    "noAccount": "ليس لديك حساب؟",
+    "haveAccount": "هل لديك حساب بالفعل؟",
+    "forgotPassword": "هل نسيت كلمة المرور؟",
+    "signing": "جاري تسجيل الدخول...",
+    "creating": "جاري الإنشاء...",
+    "fillAllFields": "يرجى ملء جميع الحقول",
+    "passwordMismatch": "كلمات المرور غير متطابقة",
+    "passwordTooShort": "كلمة المرور يجب أن تكون 6 أحرف على الأقل",
+    "agreeToTerms": "يجب الموافقة على الشروط والأحكام",
+    "signInSuccess": "أهلاً بعودتك!",
+    "signUpSuccess": "تم إنشاء الحساب بنجاح!"
+  },
+  "pricing": {
+    "title": "خطط الأسعار",
+    "subtitle": "اختر الخطة المناسبة لاحتياجاتك",
+    "basic": "أساسي",
+    "pro": "احترافي",
+    "enterprise": "مؤسسي",
+    "chooseplan": "اختر الخطة",
+    "contactsales": "اتصل بالمبيعات",
+    "mostPopular": "الأكثر شعبية",
+    "perMonth": "/شهر"
+  }
+}
