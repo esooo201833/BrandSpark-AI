@@ -13,11 +13,11 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
+  // Note: html and body tags are already rendered by root layout.tsx
+  // We just need to return children here to avoid nested document error
   return (
-    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
-      <body>
-        {children}
-      </body>
-    </html>
+    <>
+      {children}
+    </>
   );
 }

@@ -21,12 +21,13 @@ export default function middleware(request: NextRequest) {
   const hasLocalePrefix = pathname.startsWith('/en') || pathname.startsWith('/ar');
   
   if (!hasLocalePrefix) {
-    // Rewrite to default locale (en) - use rewrite not redirect for RSC support
+    // Redirect to default locale (en) - use redirect, not rewrite
     const url = request.nextUrl.clone();
     url.pathname = `/en${pathname}`;
-    return NextResponse.rewrite(url);
+    return NextResponse.redirect(url);
   }
   
+  // For paths with locale prefix, let next-intl handle it
   return intlMiddleware(request);
 }
 
