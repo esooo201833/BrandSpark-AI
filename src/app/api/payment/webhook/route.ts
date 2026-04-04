@@ -2,7 +2,22 @@ import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { PrismaClient } from '@prisma/client';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '');
+// Prevent static evaluation during build
+export const dynamic = 'force-dynamic';
+
+// Lazy initialization of Stripe - only called at runtime
+let stripeInstance: Stripe | null = null;
+function getStripe(): Stripe {
+  if (!stripeInstance) {
+    const apiKey = process.env.STRIPE_SECRET_KEY;
+    if (!apiKey) {
+      throw new Error('STRIPE_SECRET_KEY environment variable is not set');
+    }
+    stripeInstance = new Stripe(apiKey);
+  }
+  return stripeInstance;
+}
+
 const prisma = new PrismaClient();
 
 const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET || '';
@@ -21,6 +36,7 @@ export async function POST(request: NextRequest) {
   let event: Stripe.Event;
 
   try {
+    const stripe = getStripe();
     event = stripe.webhooks.constructEvent(body, sig, endpointSecret);
   } catch (err: unknown) {
     const error = err as Error;
@@ -67,6 +83,7 @@ export async function POST(request: NextRequest) {
 
 async function handleCheckoutSessionCompleted(session: Stripe.Checkout.Session) {
   if (session.subscription) {
+    const stripe = getStripe();
     const subscription = await stripe.subscriptions.retrieve(session.subscription as string) as Stripe.Subscription;
     const customerId = session.customer as string;
     const planId = session.metadata?.plan || 'pro';
@@ -118,6 +135,7 @@ async function handleInvoicePaymentSucceeded(invoice: Stripe.Invoice) {
     return;
   }
 
+  const stripe = getStripe();
   const subscription = await stripe.subscriptions.retrieve(subscriptionId) as Stripe.Subscription;
   const metadata = subscription.metadata;
   const userId = metadata?.userId;
@@ -144,6 +162,7 @@ async function handleInvoicePaymentFailed(invoice: Stripe.Invoice) {
     return;
   }
 
+  const stripe = getStripe();
   const subscription = await stripe.subscriptions.retrieve(subscriptionId) as Stripe.Subscription;
   const metadata = subscription.metadata;
   const userId = metadata?.userId;

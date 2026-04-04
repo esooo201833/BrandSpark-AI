@@ -1,9 +1,21 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 
-// Initialize Stripe only if key is available
-const stripeKey = process.env.STRIPE_SECRET_KEY;
-const stripe = stripeKey ? new Stripe(stripeKey) : null;
+// Prevent static evaluation during build
+export const dynamic = 'force-dynamic';
+
+// Lazy initialization of Stripe - only called at runtime
+let stripeInstance: Stripe | null = null;
+function getStripe(): Stripe {
+  if (!stripeInstance) {
+    const apiKey = process.env.STRIPE_SECRET_KEY;
+    if (!apiKey) {
+      throw new Error('STRIPE_SECRET_KEY environment variable is not set');
+    }
+    stripeInstance = new Stripe(apiKey);
+  }
+  return stripeInstance;
+}
 
 const PLANS = {
   basic: {
@@ -28,12 +40,7 @@ const PLANS = {
 
 export async function POST(request: NextRequest) {
   try {
-    if (!stripe) {
-      return NextResponse.json(
-        { error: 'Stripe is not configured. Please set STRIPE_SECRET_KEY in environment variables.' },
-        { status: 503 }
-      );
-    }
+    const stripe = getStripe();
 
     const { plan, email, userId } = await request.json();
 

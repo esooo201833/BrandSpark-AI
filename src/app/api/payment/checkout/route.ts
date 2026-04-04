@@ -2,7 +2,23 @@ import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { PrismaClient } from '@prisma/client';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '');
+// Prevent static evaluation during build
+export const dynamic = 'force-dynamic';
+
+// Lazy initialization of Stripe - only called at runtime
+let stripeInstance: Stripe | null = null;
+function getStripe(): Stripe {
+  if (!stripeInstance) {
+    const apiKey = process.env.STRIPE_SECRET_KEY;
+    if (!apiKey) {
+      throw new Error('STRIPE_SECRET_KEY environment variable is not set');
+    }
+    stripeInstance = new Stripe(apiKey, {
+      apiVersion: undefined,
+    });
+  }
+  return stripeInstance;
+}
 
 const prisma = new PrismaClient();
 
@@ -32,12 +48,7 @@ const PLANS = {
 
 export async function POST(request: NextRequest) {
   try {
-    if (!stripe) {
-      return NextResponse.json(
-        { error: 'Stripe is not configured' },
-        { status: 503 }
-      );
-    }
+    const stripe = getStripe();
 
     const { plan: planId, email } = await request.json();
 
