@@ -7,7 +7,13 @@ export function getOpenAIClient(): OpenAI {
     const apiKey = process.env.OPENAI_API_KEY;
     
     if (!apiKey) {
-      throw new Error('OPENAI_API_KEY environment variable is not set');
+      console.warn('OPENAI_API_KEY not set - OpenAI features will fail at runtime');
+      // Return dummy client that throws when used
+      return new Proxy({} as OpenAI, {
+        get: () => {
+          throw new Error('OPENAI_API_KEY environment variable is not set');
+        },
+      });
     }
     
     openaiInstance = new OpenAI({
