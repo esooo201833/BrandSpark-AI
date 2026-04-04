@@ -1,11 +1,29 @@
 import OpenAI from 'openai';
 
-if (!process.env.OPENAI_API_KEY) {
-  throw new Error('OPENAI_API_KEY environment variable is not set');
+let openaiInstance: OpenAI | null = null;
+
+export function getOpenAIClient(): OpenAI {
+  if (!openaiInstance) {
+    const apiKey = process.env.OPENAI_API_KEY;
+    
+    if (!apiKey) {
+      throw new Error('OPENAI_API_KEY environment variable is not set');
+    }
+    
+    openaiInstance = new OpenAI({
+      apiKey,
+    });
+  }
+  
+  return openaiInstance;
 }
 
-export const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+// For backward compatibility - lazy initialization
+export const openai = new Proxy({} as OpenAI, {
+  get: (target, prop) => {
+    const client = getOpenAIClient();
+    return (client as any)[prop];
+  },
 });
 
 // Rate limiting helper - simple in-memory cache
