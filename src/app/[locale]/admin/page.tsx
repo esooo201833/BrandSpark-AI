@@ -1,7 +1,19 @@
 "use client";
 
-import AdminPage from "../../admin/page";
+import { useEffect, useState } from "react";
 
 export default function LocalizedAdminPage() {
-  return <AdminPage />;
+  const [PageComponent, setPageComponent] = useState<any>(null);
+
+  useEffect(() => {
+    import("../../admin/page").then((mod) => {
+      setPageComponent(() => mod.default);
+    });
+  }, []);
+
+  if (!PageComponent) {
+    return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
+  }
+
+  return <PageComponent />;
 }
